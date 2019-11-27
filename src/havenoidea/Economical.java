@@ -3,6 +3,7 @@ package havenoidea;
 
 public class Economical extends TranspherService{
 	private double Raiseadvantage ;
+	protected static int iter = 1;
 	
 	public double getRaiseadvantage() {
 		return Raiseadvantage;
@@ -33,5 +34,10 @@ public class Economical extends TranspherService{
 	@Override
 	public double Regular() {
 		return  this.cost;
+	}
+	
+	public Economical() {
+		this.ID += Economical.iter;
+		Economical.iter++;
 	}
 }

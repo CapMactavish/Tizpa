@@ -1,7 +1,9 @@
 package direction;
 
+
 public class MakePrice {
-	public int outPrice(int home,int des) {
+	public int outPrice(int home, int des) {
+
 		int out = 0;
 		switch (home) {
 		case 0:
@@ -26,7 +28,7 @@ public class MakePrice {
 				break;
 			}
 			break;
-		
+
 		case 1:
 			switch (des) {
 			case 0:
@@ -118,7 +120,8 @@ public class MakePrice {
 		default:
 			break;
 		}
-		
+
 		return out;
 	}
+
 }
