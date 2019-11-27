@@ -13,7 +13,10 @@ public class Main {
 		//ahmad.setLastName(scanner.next());
 		ahmad.initateTravel();
 		System.out.println("noowfcav\n");
-		System.out.println(ahmad.Travel(0));
+		System.out.println(ahmad.Travel());
+		ahmad.initateTravel();
+		System.out.println("noowfcav\n");
+		System.out.println(ahmad.Travel());
 		
 	}
 	

@@ -10,8 +10,10 @@ import java.util.Scanner;
 
 public class User {
 	Scanner scan = new Scanner(System.in);
-	private static int iter = 1;
-	private static int tIter = 0;
+	private static int iter = 1;//for generating user ID
+	private static int tIter = 0;//for generating travels
+	
+	private int lastTrip = 0;
 	private String FirstName;
 	private String LastName;
 	private long ID = 13980900;
@@ -37,9 +39,10 @@ public class User {
 				System.out.println("come on!!!");
 				break;
 		} 
+		lastTrip = tIter;
 		tIter++;
 	}
-	public double Travel(int p) {
+	public double Travel() {
 		int  home = 0, destination = 0,P =0;
 		double time = 0,FP = 0;
 		boolean r = false;
@@ -52,9 +55,10 @@ public class User {
 		System.out.println("is it raining?");
 		r = scan.nextBoolean();
 		
-		P = owd[p].area.outPrice(home, destination);
-		FP = owd[p].getöDecision(time, r);
-
+		P = owd[lastTrip].area.outPrice(home, destination);
+		FP = owd[lastTrip].getöDecision(time, r);
+		
+		System.out.print("you have to pay:\t");
 		return FP *P;
 	}
 	public String getFirstName() {
